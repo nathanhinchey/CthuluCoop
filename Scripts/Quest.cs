@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Quest : MonoBehaviour {
 	public string title;
-	public string text;
+	public string description;
+	public float financialEffect;
+	public float physicalEffect;
+	public float mentalEffect;
 
-	public Quest(string title, string text){
+	public Quest(string title) {
 		this.title = title;
-		this.text = text;
 	}
 }
