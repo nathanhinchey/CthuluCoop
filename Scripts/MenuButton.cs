@@ -5,20 +5,21 @@ using UnityEngine.UI;
 
 public class MenuButton : MonoBehaviour {
 
-	public Transform cellPhone;
+	public Transform phoneScreen;
 	public Transform targetScreen;
 
 	// Use this for initialization
 	void Start(){
-		Debug.Log ("Start");
 		gameObject.GetComponent<Button> ().onClick.AddListener (delegate {
 			GoHome ();
 		});
 	}
 
 	void GoHome(){
-		cellPhone.DetachChildren ();
-		Debug.Log ("triggered?");
-		targetScreen.SetParent (cellPhone);
+		foreach (Transform child in phoneScreen.transform) {
+			child.gameObject.SetActive (false);
+		}
+		targetScreen.gameObject.SetActive (true);
+		List<GameObject> go = new List<GameObject> ();
 	}
 }
