@@ -20,6 +20,5 @@ public class MenuButton : MonoBehaviour {
 			child.gameObject.SetActive (false);
 		}
 		targetScreen.gameObject.SetActive (true);
-		List<GameObject> go = new List<GameObject> ();
 	}
 }
