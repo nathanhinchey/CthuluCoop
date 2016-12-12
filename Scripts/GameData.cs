@@ -32,16 +32,33 @@ public class GameData : MonoBehaviour {
 	public static Texture2D cursorDefault;
 	public Texture2D cursorDefaultTexture;
 
+	public static GameObject activeZoomView;
+
+	public static GameObject zoomViewPane;
+	public GameObject zoomPane;
+
+	public static bool hasCrowbar = false;
+	public static bool hasCandles = false;
+	public static bool hasCrossKey = false;
+	public static bool hasSkeletonKey = false;
+
 	void Start(){
+
+		// email app
 		singleEmailScreen.Add ("subject", singleEmailSubject);
 		singleEmailScreen.Add ("sender", singleEmailSender);
 		singleEmailScreen.Add ("time", singleEmailTime);
 		singleEmailScreen.Add ("body", singleEmailBody);
 		singleEmailContainer = singleEmail;
 		emailAppHeader = emailHeader;
+
+		// cursor
 		cursorPointer = cursorPointerTexture;
 		cursorDefault = cursorDefaultTexture;
 		MakeCursorNormal ();
+
+		// zoom
+		zoomViewPane = zoomPane;
 	}
 
 	public static void MakeCursorPointer(){

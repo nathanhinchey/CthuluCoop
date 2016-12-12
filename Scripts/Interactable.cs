@@ -1,18 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Interactable : MonoBehaviour {
+public class Interactable : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
 	public List<Interaction> interactionOptions;
 
 	public void OnMouseEnter(){
-		Debug.Log ("mouseenter interactable");
 		GameData.MakeCursorPointer();
 	}
 
 	public void OnMouseExit(){
-		Debug.Log ("mouseexit interactable");
+		GameData.MakeCursorNormal();
+	}
+
+	public void OnPointerEnter(PointerEventData eventData){
+		GameData.MakeCursorPointer();
+	}
+
+	public void OnPointerExit(PointerEventData eventData){
 		GameData.MakeCursorNormal();
 	}
 }

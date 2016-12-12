@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
+public class MenuButton : MonoBehaviour {
 
 	public Transform targetScreen;
 
@@ -17,14 +17,6 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
 	void LoadTargetScreen(){
 		targetScreen.SetSiblingIndex (9999);
-	}
-
-	public void OnPointerEnter(PointerEventData eventData){
-		GameData.MakeCursorPointer();
-	}
-
-	public void OnPointerExit(PointerEventData eventData){
-		GameData.MakeCursorNormal();
 	}
 
 }
