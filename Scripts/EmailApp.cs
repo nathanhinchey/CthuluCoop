@@ -11,23 +11,25 @@ public class EmailApp : MonoBehaviour {
 	public List<Dictionary<string, string>> emails = new List<Dictionary<string, string>>();
 
 	void Start () {
-		Dictionary<string, string> e1 = new Dictionary<string, string>();
-		e1.Add("subject", "Talk to your cat in the third person.");
-		e1.Add("body", "This is a call from your senator. It is urgent that you talk to your cat RIGHT NOW.");
-		e1.Add("sender", "Senator Doom");
-		e1.Add("time", "Dec 22");
+		AddFirstEmailBatch ();
+	}
 
-		emails.Add (e1);
+	// Put first batch of emails here
+	void AddFirstEmailBatch() {
+//		Dictionary<string, string> e1 = new Dictionary<string, string>();
+//		e1.Add("subject", "Subject of the email");
+//		e1.Add("body", "Body of the email");
+//		e1.Add("sender", "Name of the sender");
+//		e1.Add("time", "The date sent (yeah, this variable is named wrong)");
+//		emails.Add(e1); //This adds them to the email list
+	}
 
-		Dictionary<string, string> e2 = new Dictionary<string, string>();
-		e2.Add("subject", "Dogs are weird");
-		e2.Add("body", "Lorem Ipsum Dolores Lorem Ipsum Dolores Lorem Ipsum Dolores Lorem Ipsum Dolores Lorem Ipsum Dolores Lorem Ipsum Dolores Lorem Ipsum Dolores Lorem Ipsum Dolores Lorem Ipsum Dolores Lorem Ipsum Dolores Lorem Ipsum Dolores ");
-		e2.Add("sender", "Lorem McIpsum");
-		e2.Add("time", "Dec 23");
+	// Put second batch of emails here
+	void AddSecondEmailBatch () {
+	}
 
-		emails.Add (e2);
-
-		RenderInboxEmails ();
+	// Put third batch of emails here
+	void AddThirdEmailBatch() {
 	}
 
 	void RenderInboxEmails () {

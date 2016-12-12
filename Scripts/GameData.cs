@@ -27,6 +27,11 @@ public class GameData : MonoBehaviour {
 
 	public Text emailHeader;
 
+	public static Texture2D cursorPointer;
+	public Texture2D cursorPointerTexture;
+	public static Texture2D cursorDefault;
+	public Texture2D cursorDefaultTexture;
+
 	void Start(){
 		singleEmailScreen.Add ("subject", singleEmailSubject);
 		singleEmailScreen.Add ("sender", singleEmailSender);
@@ -34,5 +39,17 @@ public class GameData : MonoBehaviour {
 		singleEmailScreen.Add ("body", singleEmailBody);
 		singleEmailContainer = singleEmail;
 		emailAppHeader = emailHeader;
+		cursorPointer = cursorPointerTexture;
+		cursorDefault = cursorDefaultTexture;
+		MakeCursorNormal ();
 	}
+
+	public static void MakeCursorPointer(){
+		Cursor.SetCursor(cursorPointer, Vector2.zero, new CursorMode());
+	}
+
+	public static void MakeCursorNormal(){
+		Cursor.SetCursor(cursorDefault, Vector2.zero, new CursorMode());
+	}
+
 }
