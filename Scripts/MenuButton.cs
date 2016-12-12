@@ -5,20 +5,16 @@ using UnityEngine.UI;
 
 public class MenuButton : MonoBehaviour {
 
-	public Transform phoneScreen;
 	public Transform targetScreen;
 
 	// Use this for initialization
 	void Start(){
 		gameObject.GetComponent<Button> ().onClick.AddListener (delegate {
-			GoHome ();
+			LoadTargetScreen ();
 		});
 	}
 
-	void GoHome(){
-		foreach (Transform child in phoneScreen.transform) {
-			child.gameObject.SetActive (false);
-		}
-		targetScreen.gameObject.SetActive (true);
+	void LoadTargetScreen(){
+		targetScreen.SetSiblingIndex (9999);
 	}
 }
