@@ -45,19 +45,19 @@ public class sliderBehaviorScript : MonoBehaviour {
 	public void setFinance()
 	{
 		Finance.value = moneyEnergy;
-		Debug.Log("money = " + moneyEnergy);
+//		Debug.Log("money = " + moneyEnergy);
 	}
 
 	public void setMind()
 	{
 		mind.value = mindEnergy;
-		Debug.Log("mind = " + mindEnergy);
+//		Debug.Log("mind = " + mindEnergy);
 	}
 
 	public void setBody()
 	{
 		body.value = bodyEnergy;
-		Debug.Log("body = " + bodyEnergy);
+//		Debug.Log("body = " + bodyEnergy);
 	}
 
 
