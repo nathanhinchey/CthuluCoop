@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class ChangeState : MonoBehaviour {
 
-	public GameObject nextShape;
+	public GameObject nextState;
 	
 	public void BecomeNextState(){
 		gameObject.SetActive (false);
-		nextShape.SetActive (true);
+		nextState.SetActive (true);
 	}
 
 	void OnMouseDown(){
 		BecomeNextState ();
+		GameData.MakeCursorNormal ();
 	}
 }
