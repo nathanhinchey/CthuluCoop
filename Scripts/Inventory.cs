@@ -10,12 +10,11 @@ public class Inventory : MonoBehaviour {
 	// Use this for initialization
 	void Start(){
 		gameObject.GetComponent<Button> ().onClick.AddListener (delegate {
-			Debug.Log("clicked inventory");
-			UnEquip ();
+			UnequipActiveItem ();
 		});
 	}
 
-	void UnEquip(){
+	void UnequipActiveItem(){
 		if (activeItem) {
 			activeItem.Unequip();
 		}
