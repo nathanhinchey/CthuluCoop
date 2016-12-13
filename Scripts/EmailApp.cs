@@ -37,7 +37,7 @@ public class EmailApp : MonoBehaviour {
 	}
 
 	// populates the inbox with emails
-	void RenderInboxEmails () {
+	public void RenderInboxEmails () {
 		inboxEmailSection.SetSiblingIndex (9999); // bring the inbox section to the front of the email app
 		for (int i = 0; i < emails.Count; i++) {
 
