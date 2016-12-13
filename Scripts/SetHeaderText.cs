@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SetHeaderText : MonoBehaviour {
+	// Put this on anything that's changing the email app header text when clicked
+
 	public string newHeaderText;
 
 	// Use this for initialization
@@ -13,8 +15,7 @@ public class SetHeaderText : MonoBehaviour {
 			SetEmailHeaderText ();
 		});
 	}
-	
-	// Update is called once per frame
+
 	void SetEmailHeaderText () {
 		GameData.emailAppHeader.text = newHeaderText;
 	}

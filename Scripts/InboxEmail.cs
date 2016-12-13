@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class InboxEmail : MonoBehaviour {
-	public Text subjectInbox, senderInbox, timeInbox;
+	// This is for the email prefab and you probably won't have to touch it.
+
+	public Text subjectInbox, senderInbox, timeInbox; 
 	public Text subjectSingle, senderSingle, timeSingle, bodySingle;
 	public string subject, sender, body, time;
 	public bool isRead = false;
@@ -19,6 +21,7 @@ public class InboxEmail : MonoBehaviour {
 		});
 	}
 
+	// render this email's summary (does not handle positioning)
 	public void RenderForInbox(){
 
 		if (this.isRead) {
@@ -32,6 +35,7 @@ public class InboxEmail : MonoBehaviour {
 		timeInbox.text = time;
 	}
 
+	// render the long form of this email (handles positioning)
 	void OpenEmail(){
 
 		subjectSingle = GameData.singleEmailScreen ["subject"];

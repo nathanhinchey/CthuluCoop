@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Interaction : MonoBehaviour {
+	//NOT BEING USED (this was for the sims idea)
+
 	// Text that shows up on menu
 	public string decription;
 

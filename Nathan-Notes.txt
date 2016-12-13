@@ -1,7 +1,6 @@
-UI ELEMENTS WE NEED:
-- sliders
-- Interaction with objects
-- Quest alerts
-- Your phone
-    - Maybe a different scene?
+/* (made this a comment because MonoDevelop
+TO DO:
+Status bars aren't set up anywhere.
 
+
+*/

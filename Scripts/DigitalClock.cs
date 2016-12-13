@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 
 public class DigitalClock : MonoBehaviour {
+	//NOT ACTIVE ANYWHERE IN CURRENT VERSION
 	private Text timeFromClock;
 	private string hour;
 	private string minute;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Clock : MonoBehaviour {
+	// NOT ACTIVE ANYWHERE IN CURRENT VERSION
 
 	public RectTransform hourHand;
 	public RectTransform minuteHand;

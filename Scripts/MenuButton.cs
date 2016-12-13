@@ -5,8 +5,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class MenuButton : MonoBehaviour {
+	// Used for hiding the current screen in favor of a different screen
+	// I'm using "screen" here because this is mostly for the cell phone
+	// NOTE: any GO this is on must also have a Button component
 
-	public Transform targetScreen;
+	public Transform targetScreen; // the screen your button opens
 
 	// Use this for initialization
 	void Start(){
@@ -16,7 +19,7 @@ public class MenuButton : MonoBehaviour {
 	}
 
 	void LoadTargetScreen(){
-		targetScreen.SetSiblingIndex (9999);
+		targetScreen.SetSiblingIndex (9999); //bring the target screen to the front
 	}
 
 }
